@@ -120,7 +120,7 @@ def main(page: ft.Page):
             return
         
         try:
-            pessoa = Pessoa(nome.value, email.value, int(idade.value))
+            pessoa = Pessoa(nome.value, int(idade.value), email.value)
             
             if id_controle.value:  # Edição
                 pessoa.id = int(id_controle.value)
@@ -184,6 +184,7 @@ def main(page: ft.Page):
             spacing=20,
         )
     )
+
 
 # Para executar o app
 if __name__ == "__main__":
